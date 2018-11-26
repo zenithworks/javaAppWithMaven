@@ -59,6 +59,6 @@ stages:
       inputs:
         githubConnection: zenithworks
         repositoryName: zenithworks/javaAppWithMaven
-        assets: '$(System.ArtifactsDirectory)\ZenithWorks-Core\drop\target\*.jar'
+        
 
 
