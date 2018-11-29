@@ -4,11 +4,3 @@ stages:
   - job: DevJob
     displayName: Dev
     continueOnError: true
-    pool:
-      vmImage: 'ubuntu-16.04'
-      demand: maven
-    steps:
-    - task: Maven@3
-      displayName: 'Build Lite: Maven pom.xml(lite)'
-      inputs:
-        mavenPomFile: 'pom-lite.xml'
