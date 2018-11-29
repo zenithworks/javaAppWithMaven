@@ -36,4 +36,4 @@ stages:
       inputs:
         githubConnection: zenithworks
         repositoryName: zenithworks/javaAppWithMaven
-        assets: $(build.artifactstagingdirectory)/*.jar
+        assets: $(build.artifactstagingdirectory)/*.jar 
