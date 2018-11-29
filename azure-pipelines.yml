@@ -37,3 +37,6 @@ stages:
         githubConnection: zenithworks
         repositoryName: zenithworks/javaAppWithMaven
         assets: $(build.artifactstagingdirectory)/*.jar 
+
+
+
