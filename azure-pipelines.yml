@@ -36,4 +36,6 @@ stages:
       inputs:
         githubConnection: zenithworks
         repositoryName: zenithworks/javaAppWithMaven
+        tagSource: manual
+        tag: $(Build.BuildNumber)
         assets: $(build.artifactstagingdirectory)/*.jar 
