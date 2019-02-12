@@ -32,10 +32,10 @@ stages:
     #    echo $(build.artifactstagingdirectory)
 
     - task: GithubRelease@0
-      displayName: 'Edit GitHub Release'
+      displayName: 'Create GitHub Release'
       inputs:
         githubConnection: zenithworks
-        repositoryName: zenithworks/javaAppWithMaven
-        action: Edit
+        repositoryName: $(build.Repository.Name)
+        action: create
 
 
