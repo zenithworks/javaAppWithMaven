@@ -32,7 +32,8 @@ stages:
     #    echo $(build.artifactstagingdirectory)
 
     - task: GithubRelease@0 
-      displayName: 'Create GitHub Release'      
+      displayName: 'Create GitHub Release'   
+      condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/release-v')   
       inputs:
         githubConnection: zenithworks
         repositoryName: zenithworks/javaAppWithMaven           
