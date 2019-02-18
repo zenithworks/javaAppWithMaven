@@ -31,11 +31,12 @@ stages:
     #    echo 'Tests complete.'
     #    echo $(build.artifactstagingdirectory)
 
-    - task: GithubRelease@0 
-      displayName: 'Create GitHub Release'   
-      condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/release-v')   
+    - task: GithubRelease@0
+      displayName: 'Edit GitHub Release'
       inputs:
         githubConnection: zenithworks
-        repositoryName: zenithworks/javaAppWithMaven           
-        assets: $(Build.ArtifactStagingDirectory)/*.exe
+        repositoryName: zenithworks/javaMavenApp
+        action: Edit
+        tag: 'draftVersion-2.1'
+        isDraft: false
 
