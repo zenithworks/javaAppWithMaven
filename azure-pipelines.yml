@@ -35,10 +35,6 @@ stages:
       displayName: 'Create GitHub Release'      
       inputs:
         githubConnection: zenithworks
-        repositoryName: zenithworks/javaAppWithMaven
-        tagSource: manual
-        tag: $(Build.BuildNumber)      
-        assets: |
-             $(Build.ArtifactStagingDirectory)/*.exe
-             $(Build.ArtifactStagingDirectory)/README.txt
+        repositoryName: zenithworks/javaAppWithMaven           
+        assets: $(Build.ArtifactStagingDirectory)/*.exe
 
