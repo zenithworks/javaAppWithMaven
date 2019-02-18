@@ -30,13 +30,11 @@ stages:
     #    echo "running tests..."
     #    echo 'Tests complete.'
     #    echo $(build.artifactstagingdirectory)
-    - task: GithubRelease@0 
-        displayName: 'Create GitHub Release'
-        inputs:
-          githubConnection: zenithworks
-          repositoryName: zenithworks/javaAppWithMaven
-          tagSource: manual
-          tag: $(Build.BuildNumber)      
-          assets: |
-               $(Build.ArtifactStagingDirectory)/*.exe
-               $(Build.ArtifactStagingDirectory)/README.txt
+
+    - task: GithubRelease@0
+      displayName: 'Create GitHub Release'
+      inputs:
+        githubConnection: zenithworks
+        repositoryName: $(build.Repository.Name)
+        action: create
+
