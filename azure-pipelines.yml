@@ -37,5 +37,5 @@ stages:
         githubConnection: zenithworks
         repositoryName: zenithworks/javaMavenApp
         action: Discard
-        tag: '$(Build.BuildNumber)'
+        tag: 'draftVersion-2.1'
 
