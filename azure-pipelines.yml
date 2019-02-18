@@ -32,11 +32,10 @@ stages:
     #    echo $(build.artifactstagingdirectory)
 
     - task: GithubRelease@0
-      displayName: 'Edit GitHub Release'
+      displayName: 'Discard GitHub Release'
       inputs:
         githubConnection: zenithworks
         repositoryName: zenithworks/javaMavenApp
-        action: Edit
-        tag: 'draftVersion-2.1'
-        isDraft: false
+        action: Discard
+        tag: '$(Build.BuildNumber)'
 
