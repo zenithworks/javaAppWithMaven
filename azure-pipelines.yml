@@ -41,6 +41,5 @@ stages:
       inputs:
         githubConnection: zenithworks
         repositoryName: zenithworks/javaAppWithMaven
-        action: edit
+        action: delete
         tag: $(myDraftReleaseVersion)
-        isDraft: false
