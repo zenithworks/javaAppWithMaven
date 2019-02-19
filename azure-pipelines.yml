@@ -4,6 +4,7 @@ stages:
 - stage: Dev
   variables:
     system.debug: true
+    myDraftReleaseVersion: 'v1.1'
   jobs:
   - job: DevJob
     displayName: Dev
@@ -40,5 +41,6 @@ stages:
       inputs:
         githubConnection: zenithworks
         repositoryName: zenithworks/javaAppWithMaven
-        action: delete
-        tag: 'draftVersion-2.1'
+        action: edit
+        tag: $(myDraftReleaseVersion)
+        isDraft: false
