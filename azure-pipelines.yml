@@ -2,6 +2,8 @@ variables:
   system.debug: true
 stages:
 - stage: Dev
+  variables:
+    system.debug: true
   jobs:
   - job: DevJob
     displayName: Dev
