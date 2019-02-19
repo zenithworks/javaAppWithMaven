@@ -39,6 +39,6 @@ stages:
       displayName: 'Delete GitHub Release'
       inputs:
         githubConnection: zenithworks
-        repositoryName: zenithworks/javaMavenApp
+        repositoryName: zenithworks/javaAppWithMaven
         action: delete
         tag: 'draftVersion-2.1'
